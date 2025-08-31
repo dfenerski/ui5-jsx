@@ -14,7 +14,9 @@
 			"com/df/*": ["./webapp/*"],
 			"unit/*": ["./webapp/test/unit/*"],
 			"integration/*": ["./webapp/test/integration/*"]
-		}
+		},
+		"jsx": "react",
+		"jsxFactory": "jsx"
 	},
 	"exclude": ["./webapp/test/e2e/**/*"],
 	"include": ["./webapp/**/*"]

@@ -1,12 +1,12 @@
 {
 	"name": "com.df",
 	"version": "1.0.0",
-	"description": "UI5 Application: com.df",
+	"description": "I4110",
 	"author": "Dimitar Fenerski",
 	"license": "Apache-2.0",
 	"scripts": {
 		"clean": "rimraf dist coverage",
-		"build": "ui5 build --clean-dest",
+		"build": "ui5 build --clean-dest --exclude-task minify generateComponentPreload",
 		"build:opt": "ui5 build self-contained --clean-dest --all",
 		"start": "ui5 serve --port 8080 -o index.html",
 		"start-cdn": "ui5 serve --port 8080 -o index-cdn.html",
@@ -23,6 +23,9 @@
 		"wdi5": "wdio run ./webapp/test/e2e/wdio.conf.ts"
 	},
 	"devDependencies": {
+		"@babel/plugin-syntax-jsx": "^7.27.1",
+		"@babel/plugin-transform-react-jsx": "^7.27.1",
+		"@babel/preset-react": "^7.27.1",
 		"@openui5/types": "^1.139.0",
 		"@ui5/cli": "^4.0.8",
 		"@ui5/linter": "^1.0.2",

@@ -2,13 +2,28 @@ import UIComponent from "sap/ui/core/UIComponent";
 import models from "./model/models";
 import Device from "sap/ui/Device";
 
+sap.ui.loader.config({
+	map: {
+		"*": {
+			"ui5-jsx": "com/df/lib/ui5-jsx",
+		},
+	},
+	shim: {
+		"com/df/lib/ui5-jsx": {
+			amd: true,
+			deps: [],
+			exports: "UI5JSX",
+		},
+	},
+});
+
 /**
  * @namespace com.df
  */
 export default class Component extends UIComponent {
 	public static metadata = {
 		manifest: "json",
-		interfaces: ["sap.ui.core.IAsyncContentCreation"]
+		interfaces: ["sap.ui.core.IAsyncContentCreation"],
 	};
 
 	private contentDensityClass: string;
@@ -33,7 +48,10 @@ export default class Component extends UIComponent {
 	public getContentDensityClass(): string {
 		if (this.contentDensityClass === undefined) {
 			// check whether FLP has already set the content density class; do nothing in this case
-			if (document.body.classList.contains("sapUiSizeCozy") || document.body.classList.contains("sapUiSizeCompact")) {
+			if (
+				document.body.classList.contains("sapUiSizeCozy") ||
+				document.body.classList.contains("sapUiSizeCompact")
+			) {
 				this.contentDensityClass = "";
 			} else if (!Device.support.touch) {
 				// apply "compact" mode if touch is not supported

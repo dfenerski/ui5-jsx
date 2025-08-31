@@ -63,8 +63,7 @@
 		"routing": {
 			"config": {
 				"routerClass": "sap.m.routing.Router",
-				"viewType": "XML",
-				"viewPath": "com.df.view",
+				"type": "View",
 				"controlId": "app",
 				"controlAggregation": "pages"
 			},
@@ -78,7 +77,7 @@
 			"targets": {
 				"main": {
 					"viewId": "main",
-					"viewName": "Main"
+					"viewName": "module:com/df/view/Main.view"
 				}
 			}
 		}
