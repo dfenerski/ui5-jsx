@@ -1,0 +1,25 @@
+{
+	"ignore": ["**/*.d.ts"],
+	"presets": [
+		[
+			"@babel/preset-react",
+			{
+				"throwIfNamespace": false,
+				"runtime": "automatic",
+				"importSource": "com/df/ui5_jsx/base"
+			}
+		],
+		"@babel/preset-typescript"
+	],
+	"plugins": [
+		["@babel/plugin-proposal-decorators", { "version": "legacy" }],
+		["@babel/plugin-proposal-class-properties", { "loose": false }],
+		["@babel/plugin-transform-classes", { "loose": true }],
+		[
+			"babel-plugin-transform-modules-ui5",
+			{
+				"onlyMoveClassPropsUsingThis": true
+			}
+		]
+	]
+}

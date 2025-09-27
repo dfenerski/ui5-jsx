@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "es2023",
+    "module": "es2022",
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "allowJs": true,
+    "strict": true,
+    "strictNullChecks": false,
+    "strictPropertyInitialization": false,
+    "experimentalDecorators": true,
+    "rootDir": "./",
+    "types": ["@openui5/types", "@types/jquery", "@types/qunit"],
+    "paths": {
+      "com/df/ui5_jsx/*": ["./src/*"]
+    }
+  },
+  "include": ["./src/**/*", "./test/**/*", "./.ui5-tooling-modules/types/**/*"]
+}

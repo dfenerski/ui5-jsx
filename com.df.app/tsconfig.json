@@ -1,0 +1,26 @@
+{
+	"compilerOptions": {
+		"target": "es2023",
+		"module": "es2022",
+		"moduleResolution": "node",
+		"skipLibCheck": true,
+		"allowJs": true,
+		"strict": true,
+		"strictNullChecks": false,
+		"strictPropertyInitialization": false,
+		"jsx": "react",
+		"jsxFactory": "jsx",
+		"jsxFragmentFactory": "jsx",
+		"rootDir": "./webapp",
+		"experimentalDecorators": true,
+		"types": ["@openui5/types", "@types/qunit"],
+		"paths": {
+			"com/df/app/*": ["./webapp/*"],
+			"com/df/ui5_jsx/*": ["./node_modules/com.df.ui5_jsx/src/*"],
+			"unit/*": ["./webapp/test/unit/*"],
+			"integration/*": ["./webapp/test/integration/*"]
+		}
+	},
+	"exclude": ["./webapp/test/e2e/**/*"],
+	"include": ["./webapp/**/*"]
+}

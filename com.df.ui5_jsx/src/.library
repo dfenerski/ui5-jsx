@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<library xmlns="http://www.sap.com/sap.ui.library.xsd">
+	<name>com.df.ui5_jsx</name>
+	<vendor>Dimitar Fenerski</vendor>
+	<version>${version}</version>
+	<copyright>${copyright}</copyright>
+	<title>com.df.ui5_jsx</title>
+	<documentation>Some description about com.df.ui5_jsx</documentation>
+	<dependencies>
+		<dependency>
+			<libraryName>sap.ui.core</libraryName>
+		</dependency>
+	</dependencies>
+</library>
